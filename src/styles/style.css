@@ -1,13 +1,100 @@
+:root {
+    --gray: hsl(0, 0%, 17%);
+    --light-gray: hsl(0, 0%, 59%)
+}
+
 body {
     padding: 0;
     margin: 0;
-    height: 100vh;
+}
+
+.content {
+    margin: 0 auto;
+    width: 75%;
     background: url('../../images/pattern-bg-desktop.png') no-repeat;
-    background-size: contain;
+    height: 100vh;
+}
+
+.d-row {
+    display: flex;
+}
+
+.header {
+    color: white;
+}
+
+.head {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input {
+    font-size: 18px;
+    width: 400px;
+    padding: .75rem 1.5rem;
+    border: none;
+    position: relative;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.btn {
+    color: white;
+    background-color: black;
+    border: none;
+    padding: .75rem 1rem;
+    font-size: 18px;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+.search-input {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.input::after {
+    content: '>';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+}
+
+.result-box {
+    width: 60%;
+    background-color: white;
+    border-radius: 1rem;
+    margin: 0 auto;
+    padding: 2.5rem 5rem;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.result-box--title {
+    color: var(--light-gray);
+    font-weight: bold;
+}
+
+.result-box--info {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: var(--gray);
+    font-weight: bold;
 }
 
 @media only screen and (max-width: 375px) {
     body {
-        background: url('../../images/pattern-bg-mobile.png') no-repeat; 
+        background: url('../../images/pattern-bg-mobile.png') no-repeat;
     }
-  }
+}
