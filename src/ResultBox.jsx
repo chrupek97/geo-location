@@ -1,5 +1,6 @@
-const ResultBox = (props) => {
-    const { ipAddress, location, timezone, isp } = props;
+const ResultBox = ({ result }) => {
+    const { ipAddress, location, timezone, isp } = result;
+    
     return <div className='result-box'>
         <div>
             <div className='result-box--title'>IP ADDRESS</div>
@@ -11,7 +12,7 @@ const ResultBox = (props) => {
         </div>
         <div>
             <div className='result-box--title'>TIMEZONE</div>
-            <div className='result-box--info'>{timezone}</div>
+            <div className='result-box--info'>UTC {timezone}</div>
         </div>
         <div>
             <div className='result-box--title'>ISP</div>
